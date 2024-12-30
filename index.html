@@ -3,35 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A default HTML page structure.">
-    <meta name="author" content="Your Name">
-    <title>Default HTML Page</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon -->
+    <title>Paralaksa</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Import pliku CSS -->
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 800 400"
+        preserveAspectRatio="xMidYMid slice">
+        <!-- Gradienty -->
+        <defs>
+            <linearGradient id="far" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#b3cde0" />
+                <stop offset="100%" stop-color="#6497b1" />
+            </linearGradient>
+            <linearGradient id="middle" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#6497b1" />
+                <stop offset="100%" stop-color="#005b96" />
+            </linearGradient>
+            <linearGradient id="front" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#005b96" />
+                <stop offset="100%" stop-color="#03396c" />
+            </linearGradient>
+        </defs>
 
-    <main>
-        <section>
-            <h1>Welcome to My Website</h1>
-            <p>This is the default HTML structure for starting your project.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script> <!-- Link to JavaScript file -->
+        <!-- Warstwy gór -->
+        <g id="layer1">
+            <path
+                d="M0,300 Q50,250 100,280 T200,260 T300,290 T400,270 T500,300 T600,290 T700,310 T800,300 L800,400 L0,400 Z"
+                fill="url(#far)" />
+        </g>
+        <g id="layer2">
+            <path
+                d="M0,330 Q60,290 120,310 T240,290 T360,320 T480,300 T600,320 T720,300 T800,330 L800,400 L0,400 Z"
+                fill="url(#middle)" />
+        </g>
+        <g id="layer3">
+            <path
+                d="M0,360 Q80,330 160,350 T320,340 T480,370 T640,360 T800,370 L800,400 L0,400 Z"
+                fill="url(#front)" />
+        </g>
+    </svg>
+    <script src="services.js" defer></script>
 </body>
 </html>
