@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+        <title>Generator kodów QR</title>
+    </head>
+    <body class="bg-gray-400 flex items-center justify-center h-screen">
+        <div class="relative w-full h-full">
+            <svg
+                class="w-full h-full"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 600 400"
+                preserveAspectRatio="xMidYMid slice">
+                <!-- Gradienty -->
+                <defs>
+                    <radialGradient
+                        id="sunGradient"
+                        cx="0.5"
+                        cy="0.5"
+                        r="0.5">
+                        <stop
+                            offset="0%"
+                            stop-color="#FFEBB8" />
+                        <stop
+                            offset="60%"
+                            stop-color="#ffec7f" />
+                        <stop
+                            offset="100%"
+                            stop-color="#fcec96" />
+                    </radialGradient>
+                    <linearGradient
+                        id="sky"
+                        x1="0"
+                        y1="0"
+                        x2="0"
+                        y2="1">
+                        <stop
+                            offset="0%"
+                            stop-color="#87B5D6">
+                            <animate
+                                attributeName="stop-color"
+                                values="#87B5D6;#5C7081;#5C7081;#4A5663;#87B5D6"
+                                keyTimes="0;0.4;0.6;0.9;1"
+                                dur="30s"
+                                repeatCount="indefinite" />
+                        </stop>
+                        <stop
+                            offset="100%"
+                            stop-color="#B0D0E8">
+                            <animate
+                                attributeName="stop-color"
+                                values="#B0D0E8;#7D9BAF;#5E6C77;#4A5663;#B0D0E8"
+                                keyTimes="0;0.4;0.6;0.9;1"
+                                dur="30s"
+                                repeatCount="indefinite" />
+                        </stop>
+                    </linearGradient>
+                    <linearGradient
+                        id="far"
+                        x1="0"
+                        y1="0"
+                        x2="0"
+                        y2="1">
+                        <stop
+                            offset="0%"
+                            stop-color="#7FA878" />
+                        <stop
+                            offset="100%"
+                            stop-color="#5E8760" />
+                    </linearGradient>
+                    <linearGradient
+                        id="middle"
+                        x1="0"
+                        y1="0"
+                        x2="0"
+                        y2="1">
+                        <stop
+                            offset="0%"
+                            stop-color="#A8CBA4" />
+                        <stop
+                            offset="100%"
+                            stop-color="#7FA878" />
+                    </linearGradient>
+                    <linearGradient
+                        id="front"
+                        x1="0"
+                        y1="0"
+                        x2="0"
+                        y2="1">
+                        <stop
+                            offset="0%"
+                            stop-color="#BFD8B8" />
+                        <stop
+                            offset="100%"
+                            stop-color="#A8CBA4" />
+                    </linearGradient>
+                </defs>
+
+                <!-- Tło nieba -->
+                <rect
+                    width="600"
+                    height="400"
+                    fill="url(#sky)" />
+
+                <path
+                    id="sunPath"
+                    d="M -600,0 Q 300,-50 700,900"
+                    fill="none"
+                    stroke="none" />
+
+                <!-- Słońce z gradientem -->
+                <circle
+                    cx="450"
+                    cy="80"
+                    r="50"
+                    fill="url(#sunGradient)">
+                    <animateMotion
+                        repeatCount="indefinite"
+                        dur="30s">
+                        <mpath href="#sunPath" />
+                    </animateMotion>
+                </circle>
+
+                <!-- Gwiazdy -->
+                <g id="stars">
+                    <circle
+                        cx="100"
+                        cy="100"
+                        r="1.5"
+                        fill="white">
+                        <animate
+                            attributeName="opacity"
+                            values="0;0;1;0"
+                            keyTimes="0;0.5;0.9;1"
+                            dur="30s"
+                            repeatCount="indefinite" />
+                    </circle>
+                    <circle
+                        cx="200"
+                        cy="150"
+                        r="1.5"
+                        fill="white">
+                        <animate
+                            attributeName="opacity"
+                            values="0;0;1;0"
+                            keyTimes="0;0.5;0.9;1"
+                            dur="30s"
+                            repeatCount="indefinite" />
+                    </circle>
+                    <circle
+                        cx="300"
+                        cy="80"
+                        r="1.5"
+                        fill="white">
+                        <animate
+                            attributeName="opacity"
+                            values="0;0;1;0"
+                            keyTimes="0;0.5;0.9;1"
+                            dur="30s"
+                            repeatCount="indefinite" />
+                    </circle>
+                    <circle
+                        cx="400"
+                        cy="120"
+                        r="1.5"
+                        fill="white">
+                        <animate
+                            attributeName="opacity"
+                            values="0;0;1;0"
+                            keyTimes="0;0.5;0.9;1"
+                            dur="30s"
+                            repeatCount="indefinite" />
+                    </circle>
+                    <circle
+                        cx="500"
+                        cy="200"
+                        r="1.5"
+                        fill="white">
+                        <animate
+                            attributeName="opacity"
+                            values="0;0;1;0"
+                            keyTimes="0;0.5;0.9;1"
+                            dur="30s"
+                            repeatCount="indefinite" />
+                    </circle>
+                    <circle
+                        cx="600"
+                        cy="250"
+                        r="1.5"
+                        fill="white">
+                        <animate
+                            attributeName="opacity"
+                            values="0;0;1;0"
+                            keyTimes="0;0.5;0.9;1"
+                            dur="30s"
+                            repeatCount="indefinite" />
+                    </circle>
+                </g>
+
+                <!-- Warstwy gór -->
+                <g id="layer1">
+                    <path
+                        d="M0,250 Q50,200 100,230 T200,210 T300,240 T400,220 T500,250 T600,240 T700,260 T800,250 L800,400 L0,400 Z"
+                        fill="url(#far)" />
+                </g>
+                <g id="layer2">
+                    <path
+                        d="M0,280 Q60,240 120,260 T240,240 T360,270 T480,250 T600,270 T720,250 T800,280 L800,400 L0,400 Z"
+                        fill="url(#middle)" />
+                </g>
+                <g id="layer3">
+                    <path
+                        d="M0,310 Q80,270 160,290 T320,280 T480,310 T640,300 T800,310 L800,400 L0,400 Z"
+                        fill="url(#front)" />
+                </g>
+            </svg>
+            <div
+                id="qrcode-container"
+                class="absolute top-2 left-2 right-2 flex flex-wrap bg-white shadow-lg rounded-lg p-6 w-auto text-center">
+                <h1 class="text-2xl font-bold mb-4">Generator kodów QR</h1>
+                <input
+                    type="text"
+                    id="qr-text"
+                    class="w-full p-2 border rounded mb-4"
+                    placeholder="Wprowadź tekst do zakodowania" />
+                <button
+                    id="generate-btn"
+                    class="w-full bg-green-500 text-white mt-4 py-2 px-2 rounded hover:bg-green-600 transition disabled:bg-gray-200 disabled:cursor-not-allowed"
+                    disabled>
+                    <i class="fas fa-qrcode"></i>
+                    Generuj kod QR
+                </button>
+                <div
+                    id="qr-code"
+                    class="mt-4 flex justify-center"></div>
+                <button
+                    id="reset-btn"
+                    class="w-full bg-red-500 text-white mt-4 py-2 px-2 rounded hover:bg-red-600 transition"
+                    style="display: none">
+                    <i class="fas fa-refresh"></i>
+                    Resetuj
+                </button>
+            </div>
+            <div
+                class="bg-opacity-70 absolute sm:top-auto bottom-2 left-2 right-2 flex flex-wrap w-auto items-center justify-between gap-2 bg-white p-2 rounded-xl shadow-lg">
+                <!-- Napis -->
+                <div class="text-xl text-indigo-600 font-semibold">
+                    Programowanie w Piskorzowie
+                </div>
+
+                <!-- Przyciski -->
+                <div class="flex gap-4 flex-wrap">
+                    <button
+                        class="bg-amber-600 text-white py-2 px-2 rounded-lg shadow-lg hover:bg-indigo-300 transition duration-200">
+                        O nas
+                    </button>
+                    <button
+                        class="bg-indigo-500 text-white py-2 px-2 rounded-lg shadow-lg hover:bg-indigo-400 transition duration-200">
+                        O projekcie
+                    </button>
+                    <button
+                        id="qrcodeLink"
+                        class="bg-lime-600 text-white py-2 px-2 rounded-lg shadow-lg hover:bg-indigo-500 transition duration-200">
+                        Generator kodów QR
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script
+            type="module"
+            src="bundle.js"></script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+{
+    "name": "lesson_two",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "build": "tsc && browserify ./src/app.ts -p [ tsify --noImplicitAny ] > ./public/bundle.js",
+        "build:css": "npx tailwindcss -i ./src/styles.css -o ./dist/styles.css --watch",
+        "watch": "watchify ./src/app.ts -p [ tsify --noImplicitAny ] -o ./public/bundle.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "dependencies": {
+        "browserify": "^17.0.1",
+        "qrcode": "^1.5.4",
+        "tsify": "^5.0.4",
+        "typescript": "^5.7.3",
+        "watchify": "^4.0.0"
+    },
+    "devDependencies": {
+        "@types/qrcode": "^1.5.5",
+        "autoprefixer": "^10.4.20",
+        "postcss": "^8.5.1",
+        "tailwindcss": "^3.4.17"
+    }
+}
